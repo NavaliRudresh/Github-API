@@ -96,6 +96,14 @@ pprint(followerDetails())
 pprint(highestFollowers())
 
 # 5th Answer
-name_of_repo = input('Enter name of Repository to update Description.')
-contentOfDescription = input('Enter Description to update.')
-pprint(updateDescription(name_of_repo, contentOfDescription))
+g = Github('09cbbb34b27353a8e22d06ffc4cf4426e1438f2b')
+
+
+repo = g.get_user().get_repos()
+repo_name_to_edit = 'Github-API'
+input_the_new_description = 'Edit this line for new description to be updated.'
+repository = g.get_user().get_repo(repo_name_to_edit)
+
+repository.edit(description=input_the_new_description)
+
+pprint(reposOfUser())
