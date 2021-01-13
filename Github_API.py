@@ -96,8 +96,7 @@ pprint(followerDetails())
 pprint(highestFollowers())
 
 # 5th Answer
-g = Github('09cbbb34b27353a8e22d06ffc4cf4426e1438f2b')
-
+g=Github('xxxxxxxxxxxxxxx')
 
 repo = g.get_user().get_repos()
 repo_name_to_edit = 'Github-API'
